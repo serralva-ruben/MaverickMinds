@@ -1,40 +1,71 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-
-
-import { RiHomeFill } from "react-icons/ri";
-import { GrCircleInformation } from "react-icons/gr";
-import { CiMap } from "react-icons/ci";
-import { MdOutlineGeneratingTokens } from "react-icons/md";
-import { FaQuestion } from "react-icons/fa";
-import { IoIosContacts } from "react-icons/io";
-import { RiContactsBook2Line } from "react-icons/ri";
-
 
 export const NavbarComponent = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <ul style={stylesheet}>
-        <li ><RiHomeFill/>Home</li>
-        <li ><GrCircleInformation/>How it Works</li>
-        <li ><CiMap/>Explore</li>
-        <li ><MdOutlineGeneratingTokens/>Tokenomics</li>
-        <li ><FaQuestion/>FAQ </li>
-        <li ><IoIosContacts/>About Us</li>
-        <li ><RiContactsBook2Line/>Contact</li>
+    <div style={wholeNavbar}>
+      <div style={leftStyle}>
+          <div style= {{margin: 'auto'}}>DockChain</div>
+      </div>
+      <ul style={centerButtonsStyle}>
+        <li>Home</li>
+        <li>Discover</li>
+        <li>Marketplace</li>
+        <li>Support</li>
+        <li>Community</li>
       </ul>
-    </Navbar>
+      <div style={rightStyle}>
+        <div style={buttonStyle}>Connect wallet</div>
+      </div>
+    </div>
   );
 };
 
-const stylesheet = {
-    listStyleType: 'none',
-    display: 'flex',
-    flexDirection: 'column',
-    position: 'fixed',
-    justifyContent: 'space-evenly',
-    border: '1px solid red',
-    height: '80vh',
-    width: '10em',
-    marginTop: '0vh',
+const centerButtonsStyle = {
+  listStyleType: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  //border: '3px solid red',
+  height: '10vh',
+  width: '50vw',
+  padding: 0,
+};
+
+const leftStyle = {
+  //border: '3px solid blue',
+  height: '10vh',
+  width: '25vw',
+  textAlign: 'center',
+  display: 'grid',
+  fontSize: '1.5em',
+  fontStyle: 'Bold',
 }
+
+  const rightStyle = {
+  //border: '3px solid yellow',
+  height: '10vh',
+  width: '25vw',
+  display: 'grid',
+}
+
+const wholeNavbar={
+  //border: '1px solid red',
+  height: '4em',
+  width: '100vw',
+  position: 'fixed',
+  display: 'flex',
+  alignItems: 'center',
+  color: 'white',
+  background: 'rgba(0, 0, 0, 0.2)',
+}
+
+const buttonStyle = {
+  marginTop: '1vh',
+  padding: '0.5em',
+  border: '1px solid #17468D',
+  borderRadius: '15px',
+  width: '8vw',
+  textAlign: 'center',
+  fontSize: '0.8em',
+  margin: 'auto',
+  backgroundColor: '#17468D',}
