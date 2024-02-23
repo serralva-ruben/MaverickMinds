@@ -13,8 +13,8 @@ const HomeComponent = () => {
                     <h1 style={smallText}>{HomeText['littleText']}</h1>
                     <div>
                         <div style={buttonDiv}>
-                            <div style={buttonStyle}>Explore</div>
-                            <div style={buttonStyle}>Create</div>
+                            <button style={buttonStyle} className="click">Explore</button>
+                            <button style={buttonStyle} className="click">Create</button>
                         </div>
                         <div style={statsDiv}>
                             <div>
@@ -112,8 +112,6 @@ const buttonStyle = {
     textAlign: 'center',
     padding: '0.3em',
     margin: '0.35em',
-    backgroundColor: '#17468D',
-    color: 'white',
     display: 'grid',
 }
 

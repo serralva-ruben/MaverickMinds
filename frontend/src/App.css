@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.click{
+  background-color: #17468D;
+  color: white;
+}
+
+.click:hover {
+  background-color: #2164C9;
+  color: #17468D;
+  cursor: pointer;
+}

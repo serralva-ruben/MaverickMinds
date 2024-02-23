@@ -14,7 +14,7 @@ export const NavbarComponent = () => {
         <li>Community</li>
       </ul>
       <div style={rightStyle}>
-        <div style={buttonStyle}>Connect wallet</div>
+        <button style={buttonStyle} className="click">Connect wallet</button>
       </div>
     </div>
   );
@@ -33,7 +33,7 @@ const centerButtonsStyle = {
 
 const leftStyle = {
   //border: '3px solid blue',
-  height: '10vh',
+  height: '4em',
   width: '25vw',
   textAlign: 'center',
   display: 'grid',
@@ -43,9 +43,10 @@ const leftStyle = {
 
   const rightStyle = {
   //border: '3px solid yellow',
-  height: '10vh',
+  height: '4em',
   width: '25vw',
   display: 'grid',
+  margin: 'auto',
 }
 
 const wholeNavbar={
@@ -68,4 +69,4 @@ const buttonStyle = {
   textAlign: 'center',
   fontSize: '0.8em',
   margin: 'auto',
-  backgroundColor: '#17468D',}
+}
