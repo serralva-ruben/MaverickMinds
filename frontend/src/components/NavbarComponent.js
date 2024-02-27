@@ -1,22 +1,29 @@
 import React from 'react';
+import { connectWallet } from '../utils/blockchainServices';
 
 export const NavbarComponent = () => {
+  const handleWalletConnect = async () => {
+      const address = await connectWallet();
+  };
+
   return (
     <div style={wholeNavbar}>
       <div style={leftStyle}>
           <div style= {{margin: 'auto'}}>DockChain</div>
       </div>
       <div style= {{width:'20vw'}}/>
-      <ul style={centerButtonsStyle}>
-        <button className="click" style={navBarButtonsStyle}>Home</button>
-        <button className="click" style={navBarButtonsStyle}>Discover</button>
-        <button className="click" style={navBarButtonsStyle}>Marketplace</button>
-        <button className="click" style={navBarButtonsStyle}>Support</button>
-        <button className="click" style={navBarButtonsStyle}>Community</button>
-      </ul>
+        <ul style={centerButtonsStyle}>
+          <button className="click" style={navBarButtonsStyle}>Home</button>
+          <button className="click" style={navBarButtonsStyle}>Discover</button>
+          <button className="click" style={navBarButtonsStyle}>Marketplace</button>
+          <button className="click" style={navBarButtonsStyle}>Support</button>
+          <button className="click" style={navBarButtonsStyle}>Community</button>
+        </ul>
       <div style= {{width:'20vw'}}/>
       <div style={rightStyle}>
-        <button style={buttonStyle} className="click">Connect wallet</button>
+        <button style={buttonStyle} className="click" onClick={handleWalletConnect}>
+          Connect Wallet
+        </button>
       </div>
     </div>
   );
