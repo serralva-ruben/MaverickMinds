@@ -4,7 +4,7 @@ import { connectWallet } from '../utils/blockchainServices';
 export const NavbarComponent = () => {
   const handleWalletConnect = async () => {
       const address = await connectWallet();
-  };
+};
 
   return (
     <div style={wholeNavbar}>

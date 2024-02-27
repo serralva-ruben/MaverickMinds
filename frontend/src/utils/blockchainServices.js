@@ -1,6 +1,7 @@
 import { TezosToolkit } from '@taquito/taquito';
 import { BeaconWallet } from '@taquito/beacon-wallet';
 import { NetworkType } from "@airgap/beacon-types";
+import { PermissionScope } from "@airgap/beacon-sdk";
 
 const rpcUrl = "https://ghostnet.ecadinfra.com";
 const Tezos = new TezosToolkit(rpcUrl);
@@ -10,6 +11,12 @@ let address;
 let balance;
 
 export const connectWallet = async () => {
+
+    const scopes = [
+        PermissionScope.OPERATION_REQUEST,
+        PermissionScope.SIGN,
+    ];
+
     console.log("Starting wallet connection process...");
     const newWallet = new BeaconWallet({
       name: "DockdApp",
@@ -19,7 +26,7 @@ export const connectWallet = async () => {
     });
     console.log("Requesting wallet permissions...");
     try {
-        await newWallet.requestPermissions();
+        await newWallet.requestPermissions(scopes);
         console.log("Wallet permissions granted.");
 
         console.log("Retrieving wallet address...");
