@@ -20,7 +20,7 @@ export const NavbarComponent = () => {
       </div>
     </div>
   );
-};
+}
 
 const centerButtonsStyle = {
   listStyleType: 'none',

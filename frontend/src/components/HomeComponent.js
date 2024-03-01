@@ -38,7 +38,10 @@ const HomeComponent = () => {
                         </div>
                     </div>
                 </div>
-                {false ? <div style={imgDiv}><img src={image1} style={imgStyle}/></div> : null}
+                {false ? <div style={imgDiv}><img src={image1} alt="image1" style={imgStyle}/></div> : null}
+            </div>
+            <div style={DiscoverPageStyle}>
+                <p>sads</p>
             </div>
         </div>
     );
@@ -46,7 +49,6 @@ const HomeComponent = () => {
 
 const homeStyle = {
     //backgroundColor: '#2164C9',
-    
 };
 
 const imgDiv = {
@@ -67,7 +69,7 @@ const imgStyle = {
 const homePageStyle = {
     display: 'flex',
     //border: '1px solid red',
-    height: '400vh',
+    height: '50em',
     justifyContent: 'flex-start',
 };
 
@@ -112,7 +114,6 @@ const buttonStyle = {
     border: '3px solid #17468D',
     borderRadius: '15px',
     width: '10em',
-    textAlign: 'left',
     fontSize: '0.8em',
     textAlign: 'center',
     padding: '0.3em',
@@ -165,6 +166,14 @@ const backgroundVideoStyle = {
     height: '100%',
     zIndex: -1,
     objectFit: 'cover',
+}
+
+const DiscoverPageStyle={
+    border : '1px solid red',
+    width: '100vw',
+    height: '100vh',
+    color: 'white',
+    fontSize: '2em',
 }
 
 export default HomeComponent;
