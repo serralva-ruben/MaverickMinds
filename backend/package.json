@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@taquito/signer": "^19.0.2",
+    "@taquito/taquito": "^19.0.2",
     "body-parser": "^1.20.2",
     "conseiljs": "^5.2.6",
     "cors": "^2.8.5",

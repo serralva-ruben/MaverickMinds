@@ -2,9 +2,8 @@ import React from 'react';
 import { connectWallet } from '../utils/blockchainServices';
 
 export const NavbarComponent = () => {
-  const handleWalletConnect = async () => {
-      const address = await connectWallet();
-};
+  
+  const handleWalletConnect = async () => {await connectWallet();};
 
   return (
     <div style={wholeNavbar}>
@@ -15,9 +14,9 @@ export const NavbarComponent = () => {
         <ul style={centerButtonsStyle}>
           <button className="click" style={navBarButtonsStyle}>Home</button>
           <button className="click" style={navBarButtonsStyle}>Discover</button>
-          <button className="click" style={navBarButtonsStyle}>Marketplace</button>
-          <button className="click" style={navBarButtonsStyle}>Support</button>
-          <button className="click" style={navBarButtonsStyle}>Community</button>
+          <button className="click" style={navBarButtonsStyle}>About Us</button>
+          <button className="click" style={navBarButtonsStyle}>Lent Containers</button>
+          <button className="click" style={navBarButtonsStyle}>Rent lot</button>
         </ul>
       <div style= {{width:'20vw'}}/>
       <div style={rightStyle}>

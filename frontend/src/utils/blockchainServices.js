@@ -24,6 +24,7 @@ export const connectWallet = async () => {
        type: NetworkType.GHOSTNET,
      },
     });
+
     console.log("Requesting wallet permissions...");
     try {
         await newWallet.requestPermissions(scopes);

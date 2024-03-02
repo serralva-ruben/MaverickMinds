@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavbarComponent } from './NavbarComponent.js';
-import HomeText from './text.js';
+import {HomeText, DiscoverText} from './text.js';
 import image1 from '../assets/img/worldwide-shipping.png';
+import guypic from '../assets/img/guy.jpg';
 import video1 from '../assets/video/video.mp4';
 
 const HomeComponent = () => {
@@ -17,8 +18,8 @@ const HomeComponent = () => {
                     <h1 style={smallText}>{HomeText['littleText']}</h1>
                     <div>
                         <div style={buttonDiv}>
-                            <button style={buttonStyle} className="click">Explore</button>
-                            <button style={buttonStyle} className="click">Create</button>
+                            <button style={buttonStyle} className="click">Lent container</button>
+                            <button style={buttonStyle} className="click">Invest</button>
                         </div>
                         <div style={statsDiv}>
                             <div>
@@ -41,7 +42,24 @@ const HomeComponent = () => {
                 {false ? <div style={imgDiv}><img src={image1} alt="image1" style={imgStyle}/></div> : null}
             </div>
             <div style={DiscoverPageStyle}>
-                <p>sads</p>
+                <div style={DiscoverPageTextWrapper}>
+                    <h3>{DiscoverText.BigTitle}</h3>
+                    <p>{DiscoverText.IntroductionLittle}</p>
+                    <h3>{DiscoverText.subTitle1}</h3>
+                    <p>{DiscoverText.text1}</p>
+                    <h3>{DiscoverText.subTitle2}</h3>
+                    <p>{DiscoverText.text2}</p>
+                </div>
+                
+            </div>
+            <div style={contactPageStyle}>
+                    <div style={singleContactStyle}><img src={guypic} style={contactPic}/><div>Ruben Serralva</div><div>blabla@hotmail.com</div></div>
+                    <div style={singleContactStyle}><img src={guypic} style={contactPic}/><div>Enes Yokus</div><div>blabla@hotmail.com</div></div>
+                    <div style={singleContactStyle}><img src={guypic} style={contactPic}/><div>Adin Suljkanovic</div><div>blabla@hotmail.com</div></div>
+                    <div style={singleContactStyle}><img src={guypic} style={contactPic}/><div>Eldar Memikj</div><div>blabla@hotmail.com</div></div>
+                    <div style={singleContactStyle}><img src={guypic} style={contactPic}/><div>Omar Rastoder</div><div>blabla@hotmail.com</div></div>
+                    <div style={singleContactStyle}><img src={guypic} style={contactPic}/><div>Samir</div><div>blabla@hotmail.com</div></div>
+
             </div>
         </div>
     );
@@ -69,7 +87,7 @@ const imgStyle = {
 const homePageStyle = {
     display: 'flex',
     //border: '1px solid red',
-    height: '50em',
+    height: '60em',
     justifyContent: 'flex-start',
 };
 
@@ -171,9 +189,48 @@ const backgroundVideoStyle = {
 const DiscoverPageStyle={
     border : '1px solid red',
     width: '100vw',
-    height: '100vh',
+    height: 'auto',
     color: 'white',
     fontSize: '2em',
 }
+
+const DiscoverPageTextWrapper = {
+    border: '1px solid red',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    margin: 'auto',
+    width: '90vw',
+
+}
+
+const contactPageStyle = {
+    border : '1px solid red',
+    width: '100vw',
+    height: '100vh',
+    color: 'white',
+    fontSize: '1.5em',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2, 1fr)',
+}
+
+const contactPic = {
+    //border: '1px solid red',
+    borderRadius: '5em',
+    width: '5em',
+    height: '5em',
+    objectFit: 'cover',
+}
+
+const singleContactStyle={
+    //border: '1px solid red',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+}
+
 
 export default HomeComponent;
