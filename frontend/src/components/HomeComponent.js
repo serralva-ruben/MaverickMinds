@@ -4,6 +4,7 @@ import {HomeText, DiscoverText} from './text.js';
 import image1 from '../assets/img/worldwide-shipping.png';
 import guypic from '../assets/img/guy.jpg';
 import video1 from '../assets/video/video.mp4';
+import { Link as LinkRouter } from 'react-router-dom';
 
 const HomeComponent = () => {
     return (
@@ -11,14 +12,13 @@ const HomeComponent = () => {
             <video autoPlay loop muted style={backgroundVideoStyle}>
                 <source src={video1} />
             </video>
-            <NavbarComponent />
             <section id="Home" style={homePageStyle}>
                 <div>
                     <h1 style={bigText}>{HomeText['BigText']}</h1>
                     <h1 style={smallText}>{HomeText['littleText']}</h1>
                     <div>
                         <div style={buttonDiv}>
-                            <button style={buttonStyle} className="click">Trade</button>
+                            <button style={buttonStyle} className="click"><LinkRouter to="/Hub/buy"><a style={anchorStyle}>Trade</a></LinkRouter></button>
                             <button style={buttonStyle} className="click">Invest</button>
                         </div>
                         <div style={statsDiv}>
@@ -137,6 +137,9 @@ const buttonStyle = {
     padding: '0.3em',
     margin: '0.35em',
     display: 'grid',
+    testDecorator: 'none',
+    color: 'white',
+    cursor: 'pointer',
 }
 
 const statsDiv = {
@@ -187,7 +190,7 @@ const backgroundVideoStyle = {
 }
 
 const DiscoverPageStyle={
-    border : '1px solid red',
+    //border : '1px solid red',
     width: '100vw',
     height: 'auto',
     color: 'white',
@@ -195,7 +198,7 @@ const DiscoverPageStyle={
 }
 
 const DiscoverPageTextWrapper = {
-    border: '1px solid red',
+    //border: '1px solid red',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -207,7 +210,7 @@ const DiscoverPageTextWrapper = {
 }
 
 const contactPageStyle = {
-    border : '1px solid red',
+    //border : '1px solid red',
     width: '100vw',
     height: '100vh',
     color: 'white',
@@ -232,5 +235,10 @@ const singleContactStyle={
     alignItems: 'center',
 }
 
+const anchorStyle = {
+  testDecorator: 'none',
+  color: 'white',
+  cursor: 'pointer',
+}
 
 export default HomeComponent;

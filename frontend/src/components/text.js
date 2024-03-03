@@ -1,13 +1,13 @@
 export const HomeText = {
-  'BigText' : 'Welcome to DockChain',
-  'littleText' : 'We try to solve the problem of unused containers.\nBy letting us renting your unused containers you can make a passive income '
+  'BigText' : 'Welcome to DockTrade',
+  'littleText' : 'Do you need to lease or buy a container? We offer an inovative platform where you can do it easily.'
 };
 
 export const DiscoverText = {
-  'BigTitle' : 'Discover Dockchain',
-  'IntroductionLittle' : 'Do you have unused shipping containers that are sitting around? Would you like to put them to use and make some passive income with them? Dockchain might be the solution you need.',
+  'BigTitle' : 'Discover DockTrade',
+  'IntroductionLittle' : 'Are you in search of a metal box for your business? In docktrade we offer you a trading platform where you can easily buy, sell, lease, lent, etc shipping containers from providers, with our inovative platform we are connecting both the owner of the container and those who are in the need of one.',
   'subTitle1':'How dockchain works?',
-  'text1':'By letting us manage your containers, we are able to lend them in groups to big companies that want to rent lots of containers, by doing that we are able to negotiate better prices and improve profits, these profits will then be distributed back to you.',
+  'text1':'In our platform you can easily buy, sell, lease, lent, etc shipping containers from providers, you just need to connect your wallet, and go over to the trading Hub section and you are good to go, you will be able to access our platform and easily acquire the containers you need.',
   'subTitle2':'What is the dockTocken?',
-  'text2':'The dockToken is a token that represents a share of the revenues we get by renting the containers, 20% of the revenue will be shared among the holders of this token based on the amounts you hold.'
+  'text2':'The dockTocken is our platform native token, it lets you invest in our platform, which will let us develop and grow, by investing and holding this token you will have access to many advantages such as a share of the revenue of our platform (10% for leases or 5% for sells), and you will have many more advantages such as reduced fees when buying or leasing containers and many more to come.'
 }

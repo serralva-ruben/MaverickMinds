@@ -1,5 +1,6 @@
 import React , { createContext, useContext, useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link as LinkRouter } from 'react-router-dom';
+import { Link as LinkScroll } from 'react-scroll';
 import { WalletContext } from './WalletContext.js'; 
 
 export const NavbarComponent = () => {
@@ -14,10 +15,10 @@ export const NavbarComponent = () => {
       </div>
       <div style= {{width:'20vw'}}/>
         <ul style={centerButtonsStyle}>
-          <button className="click" style={navBarButtonsStyle}><Link to="Home">Home</Link></button>
-          <button className="click" style={navBarButtonsStyle}><Link to="Discover">Discover</Link></button>
-          <button className="click" style={navBarButtonsStyle}><Link to="Aboutus">About Us</Link></button>
-          <button className="click" style={navBarButtonsStyle}>Trading Hub</button>
+          <button className="click" style={navBarButtonsStyle}><LinkScroll to="Home"><LinkRouter to=""><a style={anchorStyle}>Home</a></LinkRouter></LinkScroll></button>
+          <button className="click" style={navBarButtonsStyle}><LinkScroll to="Discover"><LinkRouter to=""><a style={anchorStyle}>Discover</a></LinkRouter></LinkScroll></button>
+          <button className="click" style={navBarButtonsStyle}><LinkScroll to="Aboutus"><LinkRouter to=""><a style={anchorStyle}>About us</a></LinkRouter></LinkScroll></button>
+          <button className="click" style={navBarButtonsStyle}><LinkRouter to="/Hub/buy"><a style={anchorStyle}>Trading Hub</a></LinkRouter></button>
         </ul>
       <div style= {{width:'20vw'}}/>
       <div style={rightStyle}>
@@ -87,4 +88,10 @@ const buttonStyle = {
   textAlign: 'center',
   fontSize: '0.8em',
   margin: 'auto',
+}
+
+const anchorStyle = {
+  testDecorator: 'none',
+  color: 'white',
+  cursor: 'pointer',
 }
