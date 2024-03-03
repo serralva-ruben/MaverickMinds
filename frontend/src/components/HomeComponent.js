@@ -12,13 +12,13 @@ const HomeComponent = () => {
                 <source src={video1} />
             </video>
             <NavbarComponent />
-            <div style={homePageStyle}>
+            <section id="Home" style={homePageStyle}>
                 <div>
                     <h1 style={bigText}>{HomeText['BigText']}</h1>
                     <h1 style={smallText}>{HomeText['littleText']}</h1>
                     <div>
                         <div style={buttonDiv}>
-                            <button style={buttonStyle} className="click">Lent container</button>
+                            <button style={buttonStyle} className="click">Trade</button>
                             <button style={buttonStyle} className="click">Invest</button>
                         </div>
                         <div style={statsDiv}>
@@ -40,8 +40,8 @@ const HomeComponent = () => {
                     </div>
                 </div>
                 {false ? <div style={imgDiv}><img src={image1} alt="image1" style={imgStyle}/></div> : null}
-            </div>
-            <div style={DiscoverPageStyle}>
+            </section>
+            <section id="Discover" style={DiscoverPageStyle}>
                 <div style={DiscoverPageTextWrapper}>
                     <h3>{DiscoverText.BigTitle}</h3>
                     <p>{DiscoverText.IntroductionLittle}</p>
@@ -51,16 +51,16 @@ const HomeComponent = () => {
                     <p>{DiscoverText.text2}</p>
                 </div>
                 
-            </div>
-            <div style={contactPageStyle}>
+            </section>
+            <section id="Aboutus" style={contactPageStyle}>
                     <div style={singleContactStyle}><img src={guypic} style={contactPic}/><div>Ruben Serralva</div><div>blabla@hotmail.com</div></div>
                     <div style={singleContactStyle}><img src={guypic} style={contactPic}/><div>Enes Yokus</div><div>blabla@hotmail.com</div></div>
                     <div style={singleContactStyle}><img src={guypic} style={contactPic}/><div>Adin Suljkanovic</div><div>blabla@hotmail.com</div></div>
-                    <div style={singleContactStyle}><img src={guypic} style={contactPic}/><div>Eldar Memikj</div><div>blabla@hotmail.com</div></div>
+                    <div style={singleContactStyle}><img src={guypic} style={contactPic}/><div>Eldar Memic</div><div>blabla@hotmail.com</div></div>
                     <div style={singleContactStyle}><img src={guypic} style={contactPic}/><div>Omar Rastoder</div><div>blabla@hotmail.com</div></div>
                     <div style={singleContactStyle}><img src={guypic} style={contactPic}/><div>Samir</div><div>blabla@hotmail.com</div></div>
 
-            </div>
+            </section>
         </div>
     );
 };

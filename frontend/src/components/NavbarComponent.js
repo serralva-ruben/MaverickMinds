@@ -1,9 +1,11 @@
-import React from 'react';
-import { connectWallet } from '../utils/blockchainServices';
+import React , { createContext, useContext, useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
+import { WalletContext } from './WalletContext.js'; 
 
 export const NavbarComponent = () => {
+  const { connectWallet, disconnectWallet, isWalletConnected } = useContext(WalletContext);
   
-  const handleWalletConnect = async () => {await connectWallet();};
+
 
   return (
     <div style={wholeNavbar}>
@@ -12,16 +14,15 @@ export const NavbarComponent = () => {
       </div>
       <div style= {{width:'20vw'}}/>
         <ul style={centerButtonsStyle}>
-          <button className="click" style={navBarButtonsStyle}>Home</button>
-          <button className="click" style={navBarButtonsStyle}>Discover</button>
-          <button className="click" style={navBarButtonsStyle}>About Us</button>
-          <button className="click" style={navBarButtonsStyle}>Lent Containers</button>
-          <button className="click" style={navBarButtonsStyle}>Rent lot</button>
+          <button className="click" style={navBarButtonsStyle}><Link to="Home">Home</Link></button>
+          <button className="click" style={navBarButtonsStyle}><Link to="Discover">Discover</Link></button>
+          <button className="click" style={navBarButtonsStyle}><Link to="Aboutus">About Us</Link></button>
+          <button className="click" style={navBarButtonsStyle}>Trading Hub</button>
         </ul>
       <div style= {{width:'20vw'}}/>
       <div style={rightStyle}>
-        <button style={buttonStyle} className="click" onClick={handleWalletConnect}>
-          Connect Wallet
+        <button style={buttonStyle} className="click" onClick={connectWallet}>
+          {isWalletConnected() ? 'Connected':'Connect Wallet'}
         </button>
       </div>
     </div>
@@ -37,12 +38,14 @@ const centerButtonsStyle = {
   height: '4em',
   flex: 1, // Added property
   padding: 0,
+  whiteSpace: 'nowrap' // Added property
 };
 
 const navBarButtonsStyle = {
   border: 'none',
   background: 'none',
   height: '4em',
+  width: 'auto'
 }
 
 const leftStyle = {
